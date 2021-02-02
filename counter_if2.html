@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>VueCounterIfSample2</title>
+  </head>
+
+  <body>
+    <div id="app">
+      <button  class="button" @click="increment">+1</button>
+      <button  class="button" @click="decrement">-1</button>
+      <p>{{ count }}</p>
+      <p v-if="count >= 80" class="passed">ランクA</p>
+      <p v-else-if="count >= 60">ランクB</p>
+      <p v-else>ランクC</p>
+    </div>
+    <a href="index.html">Index</a>
+    <script src="./script/script4-2.js"></script>
+  </body>
+</html>
