@@ -10,7 +10,9 @@
 
   <body>
     <div id="app">
-
+      <div class="wrap">
+        <image-thumbnail v-for="(img, i) in images" :key="i" :path="img.path" @clickimage="onSelectImage(imag.path)"></image-thumbnail>
+      </div>
     </div>
     <a href="index.html">Index</a>
     <script src="./script/script_viewer.js"></script>
