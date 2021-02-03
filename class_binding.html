@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>VueClassBindingSample</title>
+  </head>
+
+  <body>
+    ↓↓Please Click↓↓
+    <div id="app">
+      <div :class="{'is-active': isActive}" class="btn-humburger" @click="toggleButton">
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+
+    <a href="index.html">Index</a>
+    <script src="./script/script6-2.js"></script>
+  </body>
+</html>
