@@ -11,7 +11,10 @@
   <body>
     <div id="app">
       <div class="wrap">
-        <image-thumbnail v-for="(img, i) in images" :key="i" :path="img.path" @clickimage="onSelectImage(imag.path)"></image-thumbnail>
+        <image-thumbnail v-for="(img, i) in images" :key="i" :path="img.path" @clickimage="onSelectImage(img.path)"></image-thumbnail>
+        <transition name="fade">
+          <modal :is-shown="isShown" :image-path="selectedImage" @close="closeModal" />
+        </transition>
       </div>
     </div>
     <a href="index.html">Index</a>
